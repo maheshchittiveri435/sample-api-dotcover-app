@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\Services\LinkService.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using Microsoft.AspNetCore.Mvc;
+using SampleWebApiAspNetCore.Models;
+using SampleWebApiAspNetCore.Helpers;
+using System.Reflection;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+
+namespace SampleWebApiAspNetCore.Services
+{
+    public class LinkService&lt;T&gt; : ILinkService&lt;T&gt;
+    {
+        private readonly IUrlHelper _urlHelper;
+
+        public LinkService(IUrlHelperFactory urlHelperFactory, IActionContextAccessor actionContextAccessor)
+        {
+            _urlHelper = urlHelperFactory.GetUrlHelper(actionContextAccessor.ActionContext);
+        }
+
+        public List&lt;LinkDto&gt; CreateLinksForCollection(QueryParameters queryParameters, int totalCount, ApiVersion version)
+        {
+            Type controllerType = (typeof(T));
+            MethodInfo[] methods = controllerType.GetMethods();
+
+            var links = new List&lt;LinkDto&gt;();
+            var getAllMethodName = GetMethod(methods, typeof(HttpGetAttribute), 0);
+
+            // self 
+            links.Add(new LinkDto(_urlHelper.Link(getAllMethodName, new
+            {
+                pagecount = queryParameters.PageCount,
+                page = queryParameters.Page,
+                orderby = queryParameters.OrderBy
+            }), &quot;self&quot;, &quot;GET&quot;));
+
+            links.Add(new LinkDto(_urlHelper.Link(getAllMethodName, new
+            {
+                pagecount = queryParameters.PageCount,
+                page = 1,
+                orderby = queryParameters.OrderBy
+            }), &quot;first&quot;, &quot;GET&quot;));
+
+            links.Add(new LinkDto(_urlHelper.Link(getAllMethodName, new
+            {
+                pagecount = queryParameters.PageCount,
+                page = queryParameters.GetTotalPages(totalCount),
+                orderby = queryParameters.OrderBy
+            }), &quot;last&quot;, &quot;GET&quot;));
+
+            if (queryParameters.HasNext(totalCount))
+            {
+                links.Add(new LinkDto(_urlHelper.Link(getAllMethodName, new
+                {
+                    pagecount = queryParameters.PageCount,
+                    page = queryParameters.Page + 1,
+                    orderby = queryParameters.OrderBy
+                }), &quot;next&quot;, &quot;GET&quot;));
+            }
+
+            if (queryParameters.HasPrevious())
+            {
+                links.Add(new LinkDto(_urlHelper.Link(getAllMethodName, new
+                {
+                    pagecount = queryParameters.PageCount,
+                    page = queryParameters.Page - 1,
+                    orderby = queryParameters.OrderBy
+                }), &quot;previous&quot;, &quot;GET&quot;));
+            }
+
+            var posturl = _urlHelper.Link(GetMethod(methods, typeof(HttpPostAttribute)), new { version = version.ToString() });
+
+            links.Add(
+               new LinkDto(posturl,
+               &quot;create&quot;,
+               &quot;POST&quot;));
+
+            return links;
+        }
+
+        public object ExpandSingleFoodItem(object resource, int identifier, ApiVersion version)
+        {
+            var resourceToReturn = resource.ToDynamic() as IDictionary&lt;string, object&gt;;
+
+            var links = GetLinksForSingleItem(identifier, version);
+
+            resourceToReturn.Add(&quot;links&quot;, links);
+
+            return resourceToReturn;
+        }
+
+
+        private IEnumerable&lt;LinkDto&gt; GetLinksForSingleItem(int id, ApiVersion version)
+        {
+            Type myType = (typeof(T));
+            MethodInfo[] methods = myType.GetMethods();
+            var links = new List&lt;LinkDto&gt;();
+
+            var getLink = _urlHelper.Link(GetMethod(methods, typeof(HttpGetAttribute), 1), new { version = version.ToString(), id = id });
+            links.Add(new LinkDto(getLink, &quot;self&quot;, &quot;GET&quot;));
+
+            var deleteLink = _urlHelper.Link(GetMethod(methods, typeof(HttpDeleteAttribute)), new { version = version.ToString(), id = id });
+            links.Add(
+              new LinkDto(deleteLink,
+              &quot;delete&quot;,
+              &quot;DELETE&quot;));
+
+            var createLink = _urlHelper.Link(GetMethod(methods, typeof(HttpPostAttribute)), new { version = version.ToString() });
+            links.Add(
+              new LinkDto(createLink,
+              &quot;create_food&quot;,
+              &quot;POST&quot;));
+
+            var updateLink = _urlHelper.Link(GetMethod(methods, typeof(HttpPutAttribute)), new { version = version.ToString(), id = id });
+            links.Add(
+               new LinkDto(updateLink,
+               &quot;update_food&quot;,
+               &quot;PUT&quot;));
+
+            return links;
+        }
+
+        private string GetMethod(MethodInfo[] methods, Type type, int routeParamsLength = 0)
+        {
+            var filteredMethods = methods.Where(m =&gt; m.GetCustomAttributes(type, false).Length &gt; 0).ToArray();
+
+            if (filteredMethods.Length == 0)
+            {
+                return &quot;&quot;;
+            }
+
+            if (routeParamsLength == 0)
+            {
+                var toReturn = filteredMethods.FirstOrDefault();
+
+                return toReturn is not null ? toReturn.Name : &quot;&quot;;
+            }
+
+            foreach (var method in filteredMethods)
+            {
+                var routeAttribs = method.GetCustomAttributes(typeof(RouteAttribute));
+
+                if (routeAttribs.Count() == routeParamsLength)
+                {
+                    return method.Name;
+                }
+            }
+
+            return &quot;&quot;;
+        }
+    }
+}
+
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[14,9,14,109,1],[15,9,15,10,1],[16,13,16,93,1],[17,9,17,10,1],[20,9,20,10,0],[21,13,21,47,0],[22,13,22,64,0],[24,13,24,45,0],[25,13,25,84,0],[28,13,33,33,0],[35,13,40,34,0],[42,13,47,33,0],[49,13,49,53,0],[50,13,50,14,0],[51,17,56,37,0],[57,13,57,14,0],[59,13,59,47,0],[60,13,60,14,0],[61,17,66,41,0],[67,13,67,14,0],[69,13,69,128,0],[71,13,74,25,0],[76,13,76,26,0],[77,9,77,10,0],[80,9,80,10,1],[81,13,81,88,1],[83,13,83,68,1],[85,13,85,50,1],[87,13,87,37,1],[88,9,88,10,1],[92,9,92,10,1],[93,13,93,39,1],[94,13,94,56,1],[95,13,95,45,1],[97,13,97,139,1],[98,13,98,60,1],[100,13,100,142,1],[101,13,104,26,1],[106,13,106,131,1],[107,13,110,24,1],[112,13,112,139,1],[113,13,116,24,1],[118,13,118,26,1],[119,9,119,10,1],[122,9,122,10,1],[123,13,123,54,1],[123,54,123,99,1],[123,99,123,111,1],[125,13,125,45,1],[126,13,126,14,0],[127,17,127,27,0],[130,13,130,40,1],[131,13,131,14,1],[132,17,132,65,1],[134,17,134,66,1],[137,13,137,20,1],[137,22,137,32,1],[137,33,137,35,1],[137,36,137,51,1],[138,13,138,14,1],[139,17,139,87,1],[141,17,141,63,1],[142,17,142,18,1],[143,21,143,40,1],[145,13,145,14,1],[147,13,147,23,0],[148,9,148,10,1]]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\Helpers\ExceptionExtension.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using Microsoft.AspNetCore.Diagnostics;
+
+namespace SampleWebApiAspNetCore.Helpers
+{
+    public static class ExceptionExtension
+    {
+        public static void AddProductionExceptionHandling(this IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            app.UseExceptionHandler(errorApp =&gt;
+            {
+                errorApp.Run(async context =&gt;
+                {
+                    context.Response.StatusCode = 500;
+                    context.Response.ContentType = &quot;text/plain&quot;;
+                    var errorFeature = context.Features.Get&lt;IExceptionHandlerFeature&gt;();
+                    if (errorFeature != null)
+                    {
+                        var logger = loggerFactory.CreateLogger(&quot;Global exception logger&quot;);
+                        logger.LogError(500, errorFeature.Error, errorFeature.Error.Message);
+                    }
+
+                    await context.Response.WriteAsync(&quot;There was an error&quot;);
+                });
+            });
+        }
+    }
+}
+
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[8,9,8,10,1],[9,13,10,13,1],[10,13,10,14,1],[10,14,11,17,1],[11,17,12,17,1],[12,17,12,18,0],[12,18,13,21,1],[13,21,13,55,0],[13,55,14,21,1],[14,21,14,65,0],[14,65,15,21,1],[15,21,15,89,0],[15,89,16,21,1],[16,21,16,46,0],[16,46,17,21,1],[17,21,17,22,0],[17,22,18,25,1],[18,25,18,92,0],[18,92,19,25,1],[19,25,19,94,0],[19,94,20,21,1],[20,21,20,22,0],[20,22,22,21,1],[22,21,22,77,0],[22,77,23,17,1],[23,17,23,18,0],[23,18,23,20,1],[23,20,24,13,1],[24,13,24,14,1],[24,14,24,16,1],[25,9,25,10,1]]);
+    </script>
+  </body>
+</html>

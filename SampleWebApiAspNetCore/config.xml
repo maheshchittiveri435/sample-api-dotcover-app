@@ -1,0 +1,8 @@
+<AnalyseParams>
+	<TargetExecutable>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\bin\Debug\net7.0\SampleWebApiAspNetCore.exe</TargetExecutable>
+		<TargetWorkingDir></TargetWorkingDir>
+		<TargetArguments>Properties\launchSettings.json</TargetArguments>
+    	<Output>reportTwoTests.html</Output>
+		<ReportType>HTML</ReportType>
+    	<Instance>1</Instance>
+</AnalyseParams>

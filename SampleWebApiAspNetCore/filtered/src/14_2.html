@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\Helpers\SeedDataExtension.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using SampleWebApiAspNetCore.Repositories;
+using SampleWebApiAspNetCore.Services;
+
+namespace SampleWebApiAspNetCore.Helpers
+{
+    public static class SeedDataExtension
+    {
+        public static void SeedData(this WebApplication app)
+        {
+            using (var scope = app.Services.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService&lt;FoodDbContext&gt;();
+                var seedDataService = scope.ServiceProvider.GetRequiredService&lt;ISeedDataService&gt;();
+
+                seedDataService.Initialize(dbContext);
+            }
+        }
+    }
+}
+
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[9,9,9,10,0],[10,20,10,58,0],[11,13,11,14,0],[12,17,12,91,0],[13,17,13,100,0],[15,17,15,55,0],[16,13,16,14,0],[17,9,17,10,0]]);
+    </script>
+  </body>
+</html>

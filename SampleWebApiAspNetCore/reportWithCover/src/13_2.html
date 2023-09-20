@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\Helpers\QueryParametersExtensions.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using SampleWebApiAspNetCore.Models;
+
+namespace SampleWebApiAspNetCore.Helpers
+{
+    public static class QueryParametersExtensions
+    {
+        public static bool HasPrevious(this QueryParameters queryParameters)
+        {
+            return (queryParameters.Page &gt; 1);
+        }
+
+        public static bool HasNext(this QueryParameters queryParameters, int totalCount)
+        {
+            return (queryParameters.Page &lt; (int)GetTotalPages(queryParameters, totalCount));
+        }
+
+        public static double GetTotalPages(this QueryParameters queryParameters, int totalCount)
+        {
+            return Math.Ceiling(totalCount / (double)queryParameters.PageCount);
+        }
+
+        public static bool HasQuery(this QueryParameters queryParameters)
+        {
+            return !String.IsNullOrEmpty(queryParameters.Query);
+        }
+
+        public static bool IsDescending(this QueryParameters queryParameters)
+        {
+            if (!String.IsNullOrEmpty(queryParameters.OrderBy))
+            {
+                return queryParameters.OrderBy.Split(&#39; &#39;).Last().ToLowerInvariant().StartsWith(&quot;desc&quot;);
+            }
+            return false;
+        }
+    }
+}
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[8,9,8,10,0],[9,13,9,47,0],[10,9,10,10,0],[13,9,13,10,0],[14,13,14,93,0],[15,9,15,10,0],[18,9,18,10,0],[19,13,19,81,0],[20,9,20,10,0],[23,9,23,10,0],[24,13,24,65,0],[25,9,25,10,0],[28,9,28,10,0],[29,13,29,64,0],[30,13,30,14,0],[31,17,31,104,0],[33,13,33,26,0],[34,9,34,10,0]]);
+    </script>
+  </body>
+</html>

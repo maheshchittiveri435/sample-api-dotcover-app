@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\Services\SeedDataService.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using SampleWebApiAspNetCore.Entities;
+using SampleWebApiAspNetCore.Repositories;
+
+namespace SampleWebApiAspNetCore.Services
+{
+    public class SeedDataService : ISeedDataService
+    {
+        public void Initialize(FoodDbContext context)
+        {
+            context.FoodItems.Add(new FoodEntity() { Calories = 1000, Type = &quot;Starter&quot;, Name = &quot;Lasagne&quot;, Created = DateTime.Now });
+            context.FoodItems.Add(new FoodEntity() { Calories = 1100, Type = &quot;Main&quot;, Name = &quot;Hamburger&quot;, Created = DateTime.Now });
+            context.FoodItems.Add(new FoodEntity() { Calories = 1200, Type = &quot;Dessert&quot;, Name = &quot;Spaghetti&quot;, Created = DateTime.Now });
+            context.FoodItems.Add(new FoodEntity() { Calories = 1300, Type = &quot;Starter&quot;, Name = &quot;Pizza&quot;, Created = DateTime.Now });
+
+            context.SaveChanges();
+        }
+    }
+}
+
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[9,9,9,10,0],[10,13,10,133,0],[11,13,11,132,0],[12,13,12,135,0],[13,13,13,131,0],[15,13,15,35,0],[16,9,16,10,0]]);
+    </script>
+  </body>
+</html>

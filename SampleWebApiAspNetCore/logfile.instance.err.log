@@ -1,0 +1,6 @@
+14:10:28.433 |W| FallbackJetResourceManager    | :1                 | Trying to access resource "JetBrains.Profiler.Resources.UITexts.Profiler_Launcher_Connecting" via FallbackJetResourceManager. 
+Check if component container working properly or consider using StandaloneCultureContextComponent.Ensure()
+14:10:28.515 |W| FallbackJetResourceManager    | :1                 | Trying to access resource "JetBrains.Profiler.Resources.UITexts.Profiler_Launcher_Initializing" via FallbackJetResourceManager. 
+Check if component container working properly or consider using StandaloneCultureContextComponent.Ensure()
+14:10:28.597 |W| FallbackJetResourceManager    | :1                 | Trying to access resource "JetBrains.Profiler.Resources.UITexts.Profiler_Launcher_StartingProfiler" via FallbackJetResourceManager. 
+Check if component container working properly or consider using StandaloneCultureContextComponent.Ensure()

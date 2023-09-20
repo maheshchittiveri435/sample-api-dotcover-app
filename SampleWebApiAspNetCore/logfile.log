@@ -1,0 +1,12 @@
+14:10:27.370 |I|                               | :1                 | JetBrains dotCover Console Runner 2023.1.4. Build 777.0.20230713.112516
+14:10:27.377 |I|                               | :1                 | LogLevel: VERBOSE
+14:10:27.378 |I| Main                          | :1                 | Command line: /app/dotCover.exe cover-dotnet --TargetArguments=SampleWebApiAspNetCore.dll --Output=outreport.xml --ReportType=XML --StartInstance=1 --LogLevel=Verbose --LogFile=dotcoverlogf.log
+14:10:27.415 |I| Main                          | :1                 | Creating command...
+14:10:27.419 |I| Main                          | :1                 | Executing command...
+14:10:27.426 |I| Main                          | :1                 | Instance executable: /app/linux-x64/dotnet/dotnet
+14:10:27.432 |I| Main                          | :1                 | Starting instance with parameters: 'exec --runtimeconfig "/app/dotCover.unix.runtimeconfig.json" "/app/dotCover.exe" cover-dotnet --TargetArguments=SampleWebApiAspNetCore.dll --Output=outreport.xml --ReportType=XML --LogLevel=Verbose --LogFile:dotcoverlogf.instance.log --Instance:1'
+14:10:27.704 |I| Main                          | .NET ThreadPool Worker:7 | Instance output: JetBrains dotCover Console Runner 2023.1.4. Build 777.0.20230713.112516
+14:10:27.704 |I| Main                          | .NET ThreadPool Worker:7 | Instance output: Copyright (c) 2009–2023 JetBrains s.r.o. All rights reserved.
+14:10:28.357 |I| Main                          | .NET ThreadPool Worker:7 | Instance output: [JetBrains dotCover] Coverage session started [08/04/2023 14:10:28]
+14:10:28.997 |I| Main                          | .NET ThreadPool Worker:7 | Instance output: [JetBrains dotCover] Instance started and ready to accept commands: InstanceId='1', Port=39513 [08/04/2023 14:10:28]
+14:10:29.007 |I| Main                          | :1                 | Console Runner exit code: 0

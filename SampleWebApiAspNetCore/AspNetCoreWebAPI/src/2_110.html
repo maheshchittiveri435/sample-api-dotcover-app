@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\ConfigureSwaggerOptions.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
+
+namespace SampleWebApiAspNetCore
+{
+    [ExcludeFromCodeCoverage]
+    public class ConfigureSwaggerOptions : IConfigureOptions&lt;SwaggerGenOptions&gt;
+    {
+        readonly IApiVersionDescriptionProvider provider;
+
+        public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider) =&gt; this.provider = provider;
+
+        public void Configure(SwaggerGenOptions options)
+        {
+            foreach (var description in provider.ApiVersionDescriptions)
+            {
+                options.SwaggerDoc(description.GroupName, CreateInfoForApiVersion(description));
+            }
+        }
+
+        static OpenApiInfo CreateInfoForApiVersion(ApiVersionDescription description)
+        {
+            var info = new OpenApiInfo()
+            {
+                Title = &quot;Sample API&quot;,
+                Version = description.ApiVersion.ToString(),
+                Description = &quot;A sample application with Swagger, Swashbuckle, and API versioning.&quot;,
+            };
+
+            if (description.IsDeprecated)
+            {
+                info.Description += &quot; This API version has been deprecated.&quot;;
+            }
+
+            return info;
+        }
+    }
+}
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[14,9,14,80,1],[14,84,14,108,1],[17,9,17,10,1],[18,13,18,20,1],[18,22,18,37,1],[18,38,18,40,1],[18,41,18,72,1],[19,13,19,14,1],[20,17,20,97,1],[21,13,21,14,1],[22,9,22,10,1],[25,9,25,10,1],[26,13,31,15,1],[33,13,33,42,1],[34,13,34,14,0],[35,17,35,78,0],[36,13,36,14,0],[38,13,38,25,1],[39,9,39,10,1]]);
+    </script>
+  </body>
+</html>

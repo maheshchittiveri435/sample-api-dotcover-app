@@ -1,0 +1,212 @@
+14:10:27.780 |I|                               | :1                 | JetBrains dotCover Console Runner 2023.1.4. Build 777.0.20230713.112516
+14:10:27.787 |I|                               | :1                 | LogLevel: VERBOSE
+14:10:27.789 |I| Main                          | :1                 | Command line: /app/dotCover.exe cover-dotnet --TargetArguments=SampleWebApiAspNetCore.dll --Output=outreport.xml --ReportType=XML --LogLevel=Verbose --LogFile:dotcoverlogf.instance.log --Instance:1
+14:10:27.822 |I| Main                          | :1                 | Creating command...
+14:10:27.841 |I| PathConverter                 | :1                 | Path 'outreport.xml' converted to '/app/outreport.xml'
+14:10:27.864 |I| Main                          | :1                 | Multiple dotnet runtimes found:
+/usr/share/dotnet/dotnet
+/usr/bin/dotnet
+14:10:27.893 |V| JetDispatcher                 | :1                 | Thread :1 pwned.
+14:10:27.893 |V| JetDispatcher                 | :1                 | Thread :1 created a marshaller.
+14:10:27.938 |V| JetScheduler                  | JetPool Manager:6  | Thread 'JetPool Manager' started
+14:10:27.942 |V| JetDispatcher                 | StaExecutor:7      | Thread StaExecutor:7 pwned.
+14:10:27.942 |V| JetDispatcher                 | StaExecutor:7      | Thread StaExecutor:7 created a marshaller.
+14:10:27.944 |V| JetDispatcher                 | StaExecutor:7      | Run: running message loop.
+14:10:28.033 |I| Main                          | :1                 | Known target executable: Unknown dotnet command (/usr/share/dotnet/dotnet)
+14:10:28.044 |I| Main                          | :1                 | Executing command...
+14:10:28.084 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_TEMP_DIR (no PID suffix).
+14:10:28.084 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_TEMP_DIR (no PID suffix) has no value.
+14:10:28.084 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_TEMP_DIR_PID_00000021 (PID-specific).
+14:10:28.084 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_TEMP_DIR_PID_00000021 (PID-specific) has no value.
+14:10:28.084 |V| EnvironmentVariablesUtil      | :1                 | No environment variables for additional packages are set.
+14:10:28.086 |V| EnvironmentVariablesUtil      | :8                 | Reading environment variable JET_ROAMING_APPDATA_DIR (no PID suffix).
+14:10:28.086 |V| EnvironmentVariablesUtil      | :8                 | The environment variable JET_ROAMING_APPDATA_DIR (no PID suffix) has no value.
+14:10:28.086 |V| EnvironmentVariablesUtil      | :8                 | Reading environment variable JET_ROAMING_APPDATA_DIR_PID_00000021 (PID-specific).
+14:10:28.086 |V| EnvironmentVariablesUtil      | :8                 | The environment variable JET_ROAMING_APPDATA_DIR_PID_00000021 (PID-specific) has no value.
+14:10:28.086 |V| EnvironmentVariablesUtil      | :8                 | No environment variables for additional packages are set.
+14:10:28.356 |I| Main                          | :1                 | Coverage session started
+14:10:28.426 |V| LauncherController            | :1                 | Configuration:
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<HostParameters type="LocalHostParameters" />
+	<Argument type="StandaloneArgument">
+		<Arguments>SampleWebApiAspNetCore.dll</Arguments>
+		<ClrEngine>Silverlight</ClrEngine>
+		<FileName>/usr/share/dotnet/dotnet</FileName>
+		<ProfileChildProcesses>True</ProfileChildProcesses>
+		<WorkingDirectory>/app</WorkingDirectory>
+		<Scope>
+			<ProcessFilters />
+		</Scope>
+	</Argument>
+	<Info type="CoverageInfo">
+		<CyclomaticComplexityGather>True</CyclomaticComplexityGather>
+		<InjectInfo>
+			<SymbolSearch>
+				<SearchPaths />
+			</SymbolSearch>
+			<Scope>
+				<PatternFilters>
+					<Item />
+					<Item>
+						<AssemblyFilter>mscorlib</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+					<Item>
+						<AssemblyFilter>System</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+					<Item>
+						<AssemblyFilter>System.*</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+					<Item>
+						<AssemblyFilter>Microsoft.*</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+					<Item>
+						<AssemblyFilter>netstandard</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+					<Item>
+						<AssemblyFilter>MSBuild</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+					<Item>
+						<AssemblyFilter>VBCSCompiler</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+					<Item>
+						<AssemblyFilter>NuGet.*</AssemblyFilter>
+						<Type>Deny</Type>
+					</Item>
+				</PatternFilters>
+				<DenyAttributeFilters>
+					<Item>
+						<Mask>All</Mask>
+						<TypeFilter>System.CodeDom.Compiler.GeneratedCodeAttribute</TypeFilter>
+					</Item>
+					<Item>
+						<Mask>All</Mask>
+						<TypeFilter>Microsoft.VisualStudio.TestPlatform.TestSDKAutoGeneratedCode*</TypeFilter>
+					</Item>
+				</DenyAttributeFilters>
+			</Scope>
+		</InjectInfo>
+	</Info>
+	<CoreOptions type="CoreOptions">
+		<CoreTempPath IsNull="False">
+		</CoreTempPath>
+		<RemoteEndPoint IsNull="False">
+		</RemoteEndPoint>
+		<AdditionalEnvironmentVariables />
+	</CoreOptions>
+	<HostOptions type="HostOptions">
+		<HostTempPath IsNull="False">
+		</HostTempPath>
+	</HostOptions>
+</Configuration>
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_BACKEND_CULTURE (no PID suffix).
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_BACKEND_CULTURE (no PID suffix) has no value.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_BACKEND_CULTURE_PID_00000021 (PID-specific).
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_BACKEND_CULTURE_PID_00000021 (PID-specific) has no value.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | No environment variables for additional packages are set.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_I18N_DEBUG (no PID suffix).
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_I18N_DEBUG (no PID suffix) has no value.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_I18N_DEBUG_PID_00000021 (PID-specific).
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_I18N_DEBUG_PID_00000021 (PID-specific) has no value.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | No environment variables for additional packages are set.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_I18N_DEBUG_LOWLINE (no PID suffix).
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_I18N_DEBUG_LOWLINE (no PID suffix) has no value.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | Reading environment variable JET_I18N_DEBUG_LOWLINE_PID_00000021 (PID-specific).
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | The environment variable JET_I18N_DEBUG_LOWLINE_PID_00000021 (PID-specific) has no value.
+14:10:28.428 |V| EnvironmentVariablesUtil      | :1                 | No environment variables for additional packages are set.
+14:10:28.433 |W| FallbackJetResourceManager    | :1                 | Trying to access resource "JetBrains.Profiler.Resources.UITexts.Profiler_Launcher_Connecting" via FallbackJetResourceManager. 
+Check if component container working properly or consider using StandaloneCultureContextComponent.Ensure()
+14:10:28.509 |V| SysTools                      | :1                 | SysTools location=Local res=created
+14:10:28.515 |W| FallbackJetResourceManager    | :1                 | Trying to access resource "JetBrains.Profiler.Resources.UITexts.Profiler_Launcher_Initializing" via FallbackJetResourceManager. 
+Check if component container working properly or consider using StandaloneCultureContextComponent.Ensure()
+14:10:28.523 |V| TransparentIntegrationTools   | :1                 | MakeIntegrationCoreInfo res=not_yet_implemented
+14:10:28.540 |V| LifetimeTools                 | :1                 | CreateLifetime
+14:10:28.540 |V| LifetimeTools                 | :1                 | LifetimeDefinition_Create
+14:10:28.541 |V| LifetimeDefinitions           | :1                 | Add id=22aad199-b8e9-43c9-9146-15e68291fe34
+14:10:28.541 |V| LifetimeTools                 | :1                 | LifetimeDefinition_Create res=ok lifetimeIdentity={22aad199-b8e9-43c9-9146-15e68291fe34}
+14:10:28.541 |V| LifetimeTools                 | :1                 | CreateLifetime res=ok lifetimeIdentity={22aad199-b8e9-43c9-9146-15e68291fe34}
+14:10:28.583 |V| BaseHostProfile               | :1                 | FinishProfilingAutomaticallyTimeout value=1000mS
+14:10:28.588 |V| ExcludeForProfiling           | :1                 | List exclude executables for global mode (2pcs)[JetBrains.dotCover.WorkspaceHost.exe, dotCover.exe]
+14:10:28.597 |W| FallbackJetResourceManager    | :1                 | Trying to access resource "JetBrains.Profiler.Resources.UITexts.Profiler_Launcher_StartingProfiler" via FallbackJetResourceManager. 
+Check if component container working properly or consider using StandaloneCultureContextComponent.Ensure()
+14:10:28.602 |V| BaseHostProfile               | :1                 | Start
+14:10:28.604 |V| StandaloneHostProfile         | :1                 | OnStart
+14:10:28.636 |V| LocalHost_Fiduq               | :1                 | Deploy profilerActivationFlags=(1pc)[Default] instructionSets=(1pc)[X64]
+14:10:28.643 |V| FileCacheTools                | :1                 | CacheFiles localDir=/app relativeFiles=(1pc)[linux-x64\JetBrains.Profiler.PdbServer]
+14:10:28.645 |V| EventTools                    | :1                 | Event_Create name=c6f2d133a7154c2f9b9c8533252649
+14:10:28.650 |V| Event                         | :1                 | Add id=c16f57ff-b1c3-47e0-ba8f-04feccb434c1
+14:10:28.651 |V| EventTools                    | :1                 | Event_Create name=c6f2d133a7154c2f9b9c8533252649 res=ok id=c16f57ff-b1c3-47e0-ba8f-04feccb434c1
+14:10:28.653 |V| ProcessTools                  | :1                 | Process_Start uid=1 filename=/app/linux-x64/JetBrains.Profiler.PdbServer arguments=“--stop_request_event=c6f2d133a7154c2f9b9c8533252649 jbp.e53289bfdf924f349dc19a479b751182” env=(0pcs)[]
+14:10:28.659 |V| Process                       | :1                 | Add id=fb90dcfc-0dfe-4eff-a13e-430894e8a174
+14:10:28.666 |V| ProcessTools                  | :1                 | Process_Start uid=1 res=ok pid=58 id=fb90dcfc-0dfe-4eff-a13e-430894e8a174
+14:10:28.667 |V| LocalHost_Fiduq               | :1                 | PdbServer state=started pid=58 id='jbp.e53289bfdf924f349dc19a479b751182'
+14:10:28.669 |V| JetDispatcher                 | :1                 | Run: running message loop.
+14:10:28.676 |V| JetDispatcher                 | :1                 | Run: message loop 12547953 of type JetBrains.Util.Concurrency.UnixDispatcherImpl+UnixDispatcherPlatformSpecific on thread 1 finished due to timeout and no exception was thrown.
+14:10:28.777 |V| JetDispatcher                 | :1                 | Run: running message loop.
+14:10:28.777 |V| JetDispatcher                 | :1                 | Run: message loop 12547953 of type JetBrains.Util.Concurrency.UnixDispatcherImpl+UnixDispatcherPlatformSpecific on thread 1 finished due to condition.
+14:10:28.777 |V| LocalHost_Fiduq               | :1                 | PdbServer state=listen pid=58
+14:10:28.781 |V| FileCacheTools                | :1                 | CacheFiles localDir=/app relativeFiles=(1pc)[linux-x64\libJetBrains.Profiler.Core.so]
+14:10:28.781 |V| FileCacheTools                | :1                 | CacheFiles localDir=/app relativeFiles=(1pc)[linux-x64\libJetBrains.Profiler.CoreApi.so]
+14:10:28.785 |V| Bridge_Fiduq_Vumax            | BridgeThread:15    | BridgeListen res=started
+14:10:28.786 |V| CommunicationTools            | BridgeThread:15    | SocketListener_Create endPoint=127.0.0.1:0
+14:10:28.791 |V| Listener                      | BridgeThread:15    | Add id=a2d96070-923b-444f-b69e-f6f4c1c7be0d
+14:10:28.792 |V| CommunicationTools            | BridgeThread:15    | SocketListener_Create endPoint=127.0.0.1:0 res=ok bindedEndPoint=127.0.0.1:34905 listenerId=a2d96070-923b-444f-b69e-f6f4c1c7be0d
+14:10:28.793 |V| Bridge_Fiduq_Vumax            | BridgeThread:15    | BridgeListen res=listen ipEndPoint=127.0.0.1:34905
+14:10:28.794 |V| SessionFilesManager           | BridgeThread:15    | GetListenerProxy listener=JetBrains.Profiler.Windows.SysTools.Impl.ListenerProxy isLocal=True
+14:10:28.794 |V| LifetimeTools                 | BridgeThread:15    | CreateLifetime
+14:10:28.794 |V| LifetimeTools                 | BridgeThread:15    | LifetimeDefinition_Create
+14:10:28.794 |V| LifetimeDefinitions           | BridgeThread:15    | Add id=6940340f-e84c-43c1-8c90-fde0c740756c
+14:10:28.794 |V| LifetimeTools                 | BridgeThread:15    | LifetimeDefinition_Create res=ok lifetimeIdentity={6940340f-e84c-43c1-8c90-fde0c740756c}
+14:10:28.794 |V| LifetimeTools                 | BridgeThread:15    | CreateLifetime res=ok lifetimeIdentity={6940340f-e84c-43c1-8c90-fde0c740756c}
+14:10:28.794 |V| SessionFilesManager           | BridgeThread:15    | GetListenerProxy res=ok type=HandleConverterProxy proxyConnectionLifetimeIdentity={6940340f-e84c-43c1-8c90-fde0c740756c}
+14:10:28.938 |V| BaseProcessHostProfile        | :1                 | OnStart, suspended: False
+14:10:28.938 |V| BaseHostProfile               | :1                 | OnStart
+14:10:28.939 |V| Bridge_Fiduq_Vumax            | :1                 | BlockSubscription
+14:10:28.939 |V| Bridge_Fiduq_Vumax            | :1                 | Activate
+14:10:28.939 |V| ProcessTools                  | :1                 | Process_Start uid=2 filename=/usr/share/dotnet/dotnet arguments=SampleWebApiAspNetCore.dll env=(42pcs)[COMPlus_ReadyToRun=0, COR_ENABLE_PROFILING=<DELETE>, COR_PROFILER=<DELETE>, COR_PROFILER_PATH=<DELETE>, COR_PROFILER_PATH_32=<DELETE>, COR_PROFILER_PATH_64=<DELETE>, CORECLR_ENABLE_PROFILING=7, CORECLR_PROFILER={453e3aa6-9b90-4424-be3d-b39aba4894f3}, CORECLR_PROFILER_PATH=<DELETE>, CORECLR_PROFILER_PATH_32=<DELETE>, CORECLR_PROFILER_PATH_64=/app/linux-x64/libJetBrains.Profiler.Core.so, CORECLR_PROFILER_PATH_ARM32=<DELETE>, CORECLR_PROFILER_PATH_ARM64=<DELETE>, MONO_ENV_OPTIONS=<DELETE>, JETBRAINS_MONO_ENV_OPTIONS=<DELETE>, MONO_CONFIG=<DELETE>, MONO_CFG_DIR=<DELETE>, MONO_DEBUG=<DELETE>, MONO_GAC_PREFIX=<DELETE>, MONO_CONFIG=<DELETE>, MONO_GC_PARAMS=<DELETE>, MONO_LOCAL_MACHINE_CERTS=<DELETE>, MONO_PATH=<DELETE>, JETBRAINS_PROFILER_CORE_FIRST=7, JETBRAINS_PROFILER_CORE_HOST=127.0.0.1:34905, JETBRAINS_PROFILER_CORE_DEBUG=<DELETE>, JETBRAINS_PROFILER_CORE_REMOTE=<DELETE>, JETBRAINS_PROFILER_CORE_TYPE_ReleaseCoverage={453e3aa6-9b90-4424-be3d-b39aba4894f3}, JETBRAINS_PROFILER_CORE_GUID=<DELETE>, JETBRAINS_PROFILER_CORE_PATH32=<DELETE>, JETBRAINS_PROFILER_CORE_PATH64=<DELETE>, JETBRAINS_PROFILER_CORE_PATH_ARM32=<DELETE>, JETBRAINS_PROFILER_CORE_PATH_ARM64=<DELETE>, JETBRAINS_PROFILER_CORE_LOGMASK=<DELETE>, JETBRAINS_PROFILER_CORE_TEMP=<DELETE>, JETBRAINS_PROFILER_CORE_CHAIN_GUID=<DELETE>, JETBRAINS_PROFILER_CORE_CHAIN_PATH32=<DELETE>, JETBRAINS_PROFILER_CORE_CHAIN_PATH64=<DELETE>, JETBRAINS_PROFILER_CORE_CHAIN_PATH_ARM32=<DELETE>, JETBRAINS_PROFILER_CORE_CHAIN_PATH_ARM64=<DELETE>, JETBRAINS_PROFILER_CORE_NATIVE_PROF_PARAMS=<DELETE>, JETBRAINS_DPA_AGENT_ENABLE=1]
+14:10:28.942 |V| Process                       | :1                 | Add id=41712587-acf4-4d6f-a312-f8c8c1dfc6c8
+14:10:28.942 |V| ProcessTools                  | :1                 | Process_Start uid=2 res=ok pid=63 id=41712587-acf4-4d6f-a312-f8c8c1dfc6c8
+14:10:28.948 |V| ThreadManagementUnit(S)       | :1                 | Short Tasks: starting executor JetPool(S) #1
+14:10:28.949 |V| ThreadManagementUnit(S)       | :1                 | Short Tasks: starting executor JetPool(S) #2
+14:10:28.951 |V| JetScheduler                  | JetPool(S) #2:17   | Thread 'JetPool(S) #2' started execution in unit 'Short Tasks'. #allExecutors=2, #freeExecutors=0
+14:10:28.951 |V| JetScheduler                  | JetPool(S) #1:16   | Thread 'JetPool(S) #1' started execution in unit 'Short Tasks'. #allExecutors=2, #freeExecutors=0
+14:10:28.951 |V| BaseHostProfile               | :1                 | Start res=activate
+14:10:28.953 |I| Main                          | :1                 | Starting instance service
+14:10:28.962 |V| ServerSocket--Sender          | :1                 | PAUSE ('Disconnected') :: state=Initialized
+14:10:28.966 |V| INIT                          | :1                 | Creating server socket on endpoint: 
+14:10:28.966 |V| INIT                          | :1                 | Server socket created, listening started on endpoint: 127.0.0.1:0
+14:10:28.968 |V| Server                        | :1                 | ServerSocket-<noname> : started, port: 39513
+14:10:28.970 |V| Server                        | ServerSocket-<noname>-Receiver:20 | ServerSocket-<noname> : accepting, port: 39513
+14:10:28.996 |I| Main                          | :1                 | Instance started and ready to accept commands: InstanceId='1', Port=39513
+14:10:28.997 |V| JetDispatcher                 | :1                 | Run: running message loop.
+14:10:29.049 |V| HandleConverterProxy          | BridgeThread:15    | HandleConverterProxy srcProcessId=33
+14:10:29.051 |V| LifetimeTools                 | BridgeThread:15    | GetLifetime lifetimeIdentity={6940340f-e84c-43c1-8c90-fde0c740756c}
+14:10:29.051 |V| LifetimeTools                 | BridgeThread:15    | GetLifetime res=ok lifetimeIdentity={6940340f-e84c-43c1-8c90-fde0c740756c}
+14:10:29.052 |V| Socket                        | BridgeThread:15    | Add id=54f14799-e9fa-4321-9db7-edfa0e055165
+14:10:29.155 |V| CommunicationTools            | BridgeThread:15    | Listener_GetNewStreamIds listenerId=a2d96070-923b-444f-b69e-f6f4c1c7be0d res=ok streamIds=(1pc)[54f14799-e9fa-4321-9db7-edfa0e055165]
+14:10:29.157 |V| Bridge_Fiduq_Vumax            | BridgeThread:15    | BridgeListen res=accept streamId=54f14799-e9fa-4321-9db7-edfa0e055165
+14:10:29.159 |V| Bridge_Fiduq_Vumax            | BridgeCoreThread:21 | BridgeStream streamId=54f14799-e9fa-4321-9db7-edfa0e055165 res=started
+14:10:29.161 |V| Bridge_Fiduq_Vumax            | BridgeCoreThread:21 | BridgeStream streamId=54f14799-e9fa-4321-9db7-edfa0e055165 res=connected
+14:10:29.166 |V| HandleConverterProxy          | BridgeCoreThread:21 | ReceiveCommand cmd=Info coreProcessId=63
+14:10:29.175 |I| Main                          | BridgeCoreThread:21 | Profilee process accepted (pid=63): /usr/share/dotnet/dotnet (/usr/share/dotnet/dotnet SampleWebApiAspNetCore.dll)
+14:10:29.178 |V| BaseHostProfile               | BridgeCoreThread:21 | Executable='/usr/share/dotnet/dotnet' (pid=63) is being passed for filtering
+14:10:29.178 |V| BaseHostProfile               | BridgeCoreThread:21 | Passed filter executable='/usr/share/dotnet/dotnet'
+14:10:29.179 |V| SessionFilesManager           | BridgeCoreThread:21 | CreateCoreFilesManager coreDirs= isLocal=True
+14:10:29.202 |V| Bridge_Fiduq_Vumax            | BridgeCoreThread:21 | BridgeStream streamId=54f14799-e9fa-4321-9db7-edfa0e055165 res=accepted core=6245b039-d3c8-4fdc-bc09-2545288daa9b process=813375b8-de83-4094-9783-f06952e610fd
+14:10:29.217 |V| MeasureCommandProcessor_Fiduq_Vumax| BridgeCoreThread:21 | OnInitializeDone
+14:10:29.227 |V| Files                         | BridgeCoreThread:21 | Add id=2d53c632-054b-4f23-97ce-57d1559b1013
+14:10:29.227 |V| LifetimeTools                 | BridgeCoreThread:21 | GetLifetime lifetimeIdentity={22aad199-b8e9-43c9-9146-15e68291fe34}
+14:10:29.227 |V| LifetimeTools                 | BridgeCoreThread:21 | GetLifetime res=ok lifetimeIdentity={22aad199-b8e9-43c9-9146-15e68291fe34}
+14:10:29.228 |V| FileStorageTools              | BridgeCoreThread:21 | AddFile file=/tmp/JetBrainsPerUserTemp-0-1/jb.63.j8m9rp.sst res=ok id=2d53c632-054b-4f23-97ce-57d1559b1013
+14:10:29.270 |V| Files                         | BridgeCoreThread:21 | Add id=23993f09-a331-47b4-88e5-7f763bab20e0
+14:10:29.270 |V| LifetimeTools                 | BridgeCoreThread:21 | GetLifetime lifetimeIdentity={22aad199-b8e9-43c9-9146-15e68291fe34}
+14:10:29.270 |V| LifetimeTools                 | BridgeCoreThread:21 | GetLifetime res=ok lifetimeIdentity={22aad199-b8e9-43c9-9146-15e68291fe34}
+14:10:29.270 |V| FileStorageTools              | BridgeCoreThread:21 | AddFile file=/tmp/JetBrainsPerUserTemp-0-1/jb.63.ccazd4.sst res=ok id=23993f09-a331-47b4-88e5-7f763bab20e0
+14:10:29.270 |V| MeasureCommandProcessor_Fiduq_Vumax| BridgeCoreThread:21 | OnStarted

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>C:\Users\Mahes\dotnet\ASPNETCore-WebAPI-Sample\SampleWebApiAspNetCore\Helpers\VersioningExtension.cs</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace SampleWebApiAspNetCore.Helpers
+{
+    public static class VersioningExtension
+    {
+        public static void AddVersioning(this IServiceCollection services)
+        {
+            services.AddApiVersioning(
+               config =&gt;
+               {
+                   config.ReportApiVersions = true;
+                   config.AssumeDefaultVersionWhenUnspecified = true;
+                   config.DefaultApiVersion = new ApiVersion(1, 0);
+                   config.ApiVersionReader = ApiVersionReader.Combine(new UrlSegmentApiVersionReader(),
+                                                                                        new HeaderApiVersionReader(&quot;x-api-version&quot;),
+                                                                                        new MediaTypeApiVersionReader(&quot;x-api-version&quot;));
+               });
+            services.AddVersionedApiExplorer(
+                options =&gt;
+                {
+                    options.GroupNameFormat = &quot;&#39;v&#39;VVV&quot;;
+
+                    // note: this option is only necessary when versioning by url segment. the SubstitutionFormat
+                    // can also be used to control the format of the API version in route templates
+                    options.SubstituteApiVersionInUrl = true;
+                });
+        }
+    }
+}
+
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[10,9,10,10,1],[11,13,13,16,1],[13,16,13,17,1],[13,17,14,20,1],[14,20,14,52,1],[14,52,15,20,1],[15,20,15,70,1],[15,70,16,20,1],[16,20,16,68,1],[16,68,17,20,1],[17,20,19,137,1],[19,137,20,16,1],[20,16,20,17,1],[20,17,20,19,1],[21,13,23,17,1],[23,17,23,18,0],[23,18,24,21,1],[24,21,24,56,0],[24,56,28,21,1],[28,21,28,62,0],[28,62,29,17,1],[29,17,29,18,0],[29,18,29,20,1],[30,9,30,10,1]]);
+    </script>
+  </body>
+</html>

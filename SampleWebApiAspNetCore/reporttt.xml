@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root CoveredStatements="243" TotalStatements="428" CoveragePercent="57" ReportType="Xml" DotCoverVersion="2023.1.3">
+  <Assembly Name="SampleWebApiAspNetCore" CoveredStatements="243" TotalStatements="428" CoveragePercent="57">
+    <Namespace Name="SampleWebApiAspNetCore" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+      <Type Name="ConfigureSwaggerOptions" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+        <Constructor Name="ConfigureSwaggerOptions(IApiVersionDescriptionProvider)" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+        <Method Name="Configure(SwaggerGenOptions):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+        <Method Name="CreateInfoForApiVersion(ApiVersionDescription):OpenApiInfo" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Controllers.v1" CoveredStatements="54" TotalStatements="94" CoveragePercent="57">
+      <Type Name="FoodsController" CoveredStatements="54" TotalStatements="94" CoveragePercent="57">
+        <Constructor Name="FoodsController(IFoodRepository,IMapper,ILinkService&lt;FoodsController&gt;)" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+        <Method Name="AddFood(ApiVersion,FoodCreateDto):ActionResult&lt;FoodDto&gt;" CoveredStatements="9" TotalStatements="13" CoveragePercent="69" />
+        <Method Name="GetAllFoods(ApiVersion,QueryParameters):ActionResult" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+          <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+          <AnonymousMethod Name="(FoodEntity):object" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Method>
+        <Method Name="GetRandomMeal():ActionResult" CoveredStatements="0" TotalStatements="8" CoveragePercent="0">
+          <OwnCoverage CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+          <AnonymousMethod Name="(FoodEntity):FoodDto" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Method>
+        <Method Name="GetSingleFood(ApiVersion,int):ActionResult" CoveredStatements="8" TotalStatements="8" CoveragePercent="100" />
+        <Method Name="PartiallyUpdateFood(ApiVersion,int,JsonPatchDocument&lt;FoodUpdateDto&gt;):ActionResult&lt;FoodDto&gt;" CoveredStatements="14" TotalStatements="22" CoveragePercent="64" />
+        <Method Name="RemoveFood(int):ActionResult" CoveredStatements="7" TotalStatements="11" CoveragePercent="64" />
+        <Method Name="UpdateFood(ApiVersion,int,FoodUpdateDto):ActionResult&lt;FoodDto&gt;" CoveredStatements="10" TotalStatements="16" CoveragePercent="63" />
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Controllers.v2" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+      <Type Name="FoodsController" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+        <Method Name="Get():ActionResult" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Dtos" CoveredStatements="26" TotalStatements="26" CoveragePercent="100">
+      <Type Name="FoodCreateDto" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+        <AutoProperty Name="Calories:int" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Created:DateTime" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Name:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Type:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+      </Type>
+      <Type Name="FoodDto" CoveredStatements="10" TotalStatements="10" CoveragePercent="100">
+        <AutoProperty Name="Calories:int" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Created:DateTime" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Id:int" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Name:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Type:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+      </Type>
+      <Type Name="FoodUpdateDto" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+        <AutoProperty Name="Calories:int" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Created:DateTime" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Name:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Type:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Entities" CoveredStatements="9" TotalStatements="10" CoveragePercent="90">
+      <Type Name="FoodEntity" CoveredStatements="9" TotalStatements="10" CoveragePercent="90">
+        <AutoProperty Name="Calories:int" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Created:DateTime" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Id:int" CoveredStatements="1" TotalStatements="2" CoveragePercent="50">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="Name:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Type:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Helpers" CoveredStatements="25" TotalStatements="66" CoveragePercent="38">
+      <Type Name="CorsExtension" CoveredStatements="9" TotalStatements="9" CoveragePercent="100">
+        <Method Name="AddCustomCors(IServiceCollection,string):void" CoveredStatements="9" TotalStatements="9" CoveragePercent="100">
+          <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          <AnonymousMethod Name="(CorsOptions):void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+            <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            <AnonymousMethod Name="(CorsPolicyBuilder):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </AnonymousMethod>
+        </Method>
+      </Type>
+      <Type Name="ExceptionExtension" CoveredStatements="6" TotalStatements="17" CoveragePercent="35">
+        <Method Name="AddProductionExceptionHandling(IApplicationBuilder,ILoggerFactory):void" CoveredStatements="6" TotalStatements="17" CoveragePercent="35">
+          <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          <AnonymousMethod Name="(IApplicationBuilder):void" CoveredStatements="3" TotalStatements="14" CoveragePercent="21">
+            <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            <AnonymousMethod Name="(HttpContext):Task" CoveredStatements="0" TotalStatements="11" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="11" CoveragePercent="0" />
+            </AnonymousMethod>
+          </AnonymousMethod>
+        </Method>
+      </Type>
+      <Type Name="QueryParametersExtensions" CoveredStatements="0" TotalStatements="18" CoveragePercent="0">
+        <Method Name="GetTotalPages(QueryParameters,int):double" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="HasNext(QueryParameters,int):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="HasPrevious(QueryParameters):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="HasQuery(QueryParameters):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="IsDescending(QueryParameters):bool" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+      </Type>
+      <Type Name="SeedDataExtension" CoveredStatements="0" TotalStatements="8" CoveragePercent="0">
+        <Method Name="SeedData(WebApplication):void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+      </Type>
+      <Type Name="VersioningExtension" CoveredStatements="10" TotalStatements="14" CoveragePercent="71">
+        <Method Name="AddVersioning(IServiceCollection):void" CoveredStatements="10" TotalStatements="14" CoveragePercent="71">
+          <OwnCoverage CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+          <AnonymousMethod Name="(ApiVersioningOptions):void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+          <AnonymousMethod Name="(ApiExplorerOptions):void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+        </Method>
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.MappingProfiles" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+      <Type Name="FoodMappings" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+        <Constructor Name="FoodMappings()" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Models" CoveredStatements="23" TotalStatements="39" CoveragePercent="59">
+      <Type Name="DynamicExtensions" CoveredStatements="11" TotalStatements="11" CoveragePercent="100">
+        <Method Name="ToDynamic(object):object" CoveredStatements="11" TotalStatements="11" CoveragePercent="100" />
+      </Type>
+      <Type Name="LinkDto" CoveredStatements="12" TotalStatements="12" CoveragePercent="100">
+        <Constructor Name="LinkDto(string,string,string)" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+        <AutoProperty Name="Href:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Method:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+        <AutoProperty Name="Rel:string" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+      </Type>
+      <Type Name="QueryParameters" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+        <Constructor Name="QueryParameters()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+        <AutoProperty Name="OrderBy:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <AutoProperty Name="Page:int" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+        <Property Name="PageCount:int" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Property>
+        <AutoProperty Name="Query:string" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </AutoProperty>
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Repositories" CoveredStatements="27" TotalStatements="48" CoveragePercent="56">
+      <Type Name="FoodDbContext" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+        <Constructor Name="FoodDbContext(DbContextOptions&lt;FoodDbContext&gt;)" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+        <AutoProperty Name="FoodItems:DbSet&lt;FoodEntity&gt;" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+          <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <PropertySetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </AutoProperty>
+      </Type>
+      <Type Name="FoodSqlRepository" CoveredStatements="21" TotalStatements="42" CoveragePercent="50">
+        <Constructor Name="FoodSqlRepository(FoodDbContext)" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+        <Method Name="Add(FoodEntity):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+        <Method Name="Count():int" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="Delete(int):void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+        <Method Name="GetAll(QueryParameters):IQueryable&lt;FoodEntity&gt;" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+        <Method Name="GetRandomItem(string):FoodEntity" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        <Method Name="GetRandomMeal():ICollection&lt;FoodEntity&gt;" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+        <Method Name="GetSingle(int):FoodEntity" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+        <Method Name="Save():bool" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+        <Method Name="Update(int,FoodEntity):FoodEntity" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+      </Type>
+    </Namespace>
+    <Namespace Name="SampleWebApiAspNetCore.Services" CoveredStatements="43" TotalStatements="73" CoveragePercent="59">
+      <Type Name="LinkService&lt;T&gt;" CoveredStatements="43" TotalStatements="66" CoveragePercent="65">
+        <Constructor Name="LinkService(IUrlHelperFactory,IActionContextAccessor)" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+        <Method Name="CreateLinksForCollection(QueryParameters,int,ApiVersion):List&lt;LinkDto&gt;" CoveredStatements="0" TotalStatements="20" CoveragePercent="0" />
+        <Method Name="ExpandSingleFoodItem(object,int,ApiVersion):object" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+        <Method Name="GetLinksForSingleItem(int,ApiVersion):IEnumerable&lt;LinkDto&gt;" CoveredStatements="14" TotalStatements="14" CoveragePercent="100" />
+        <Method Name="GetMethod(MethodInfo[],Type,int):string" CoveredStatements="19" TotalStatements="22" CoveragePercent="86">
+          <OwnCoverage CoveredStatements="18" TotalStatements="21" CoveragePercent="86" />
+          <AnonymousMethod Name="(MethodInfo):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </Method>
+      </Type>
+      <Type Name="SeedDataService" CoveredStatements="0" TotalStatements="7" CoveragePercent="0">
+        <Method Name="Initialize(FoodDbContext):void" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+      </Type>
+    </Namespace>
+    <Type Name="Program" CoveredStatements="30" TotalStatements="44" CoveragePercent="68">
+      <Method Name="&lt;Main&gt;$(string[]):void" CoveredStatements="30" TotalStatements="44" CoveragePercent="68">
+        <OwnCoverage CoveredStatements="27" TotalStatements="32" CoveragePercent="84" />
+        <AnonymousMethod Name="(MvcNewtonsoftJsonOptions):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        <AnonymousMethod Name="(RouteOptions):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        <AnonymousMethod Name="(DbContextOptionsBuilder):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        <AnonymousMethod Name="(SwaggerUIOptions):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+      </Method>
+    </Type>
+  </Assembly>
+</Root>
